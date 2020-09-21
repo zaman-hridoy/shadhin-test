@@ -22,3 +22,9 @@ export const getSearchResults = keyword => {
         }
     }
 }
+
+export const clearSearchResult = () => {
+    return dispatch => {
+        dispatch({ type: actions.CLEAR_SEARCH_RESULT });
+    }
+}

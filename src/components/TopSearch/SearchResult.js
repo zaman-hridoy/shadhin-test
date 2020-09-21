@@ -1,17 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const SearchResult = ({ loading, results }) => {
+const SearchResult = ({ loading, results, clearKeyword }) => {
     const searchItems = results !== null && results.data.Album.data.map(artist => {
         const image = artist.image.replace('<$size$>', '300');
         // console.log(image);
         return (
             <li key={artist.AlbumId}>
-                <a href="#!"><img src={image || '/img/artist1.jpg'} alt={artist.Artist} /> <span>{artist.Artist}</span> - {artist.title}</a>
+                <Link to="/q/home-player-queue" href="#!" onClick={clearKeyword}>
+                    <img src={image || '/img/artist1.jpg'} alt={artist.Artist} /> 
+                    <span>{artist.Artist}</span> - {artist.title}
+                </Link>
             </li>
         )
     });
     return (
         <div className="search-reasult">
+                {/* {loading && <img className="show_search_box_loader" src="/loader/loader.gif" alt="loader"/>} */}
                 <ul>
                     {searchItems}
                     {/* <li><a href="#!"><img src="img/artist1.jpg" /> <span>Habib wa</span>hid - Prithibir Joto Shukh</a></li>

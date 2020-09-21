@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="row">
             <div className="col">
                 <ul className="first-block">
-                <li><a href="index.html"><img src="img/logo2.png" className="footer-logo" alt="logo" /></a></li>
+                <li><a href="#"><img src="/img/logo2.png" className="footer-logo" alt="logo" /></a></li>
                 <li><a href="#!"><i className="fa fa-instagram"></i>Instagram</a></li>
                 <li><a href="#!"><i className="fa fa-facebook"></i>Facebook</a></li>
                 <li><a href="#!"><i className="fa fa-twitter"></i>Twitter</a></li>
@@ -48,8 +48,8 @@ const Footer = () => {
                 <div className="footer-mobile-app">
                 <h6>Download the App</h6>
                 <ul>
-                    <li><a href="#!"><img src="img/gp.png" alt="logo" /></a></li>
-                    <li><a href="#!"><img src="img/as.png" alt="logo" /></a></li>
+                    <li><a href="#!"><img src="/img/gp.png" alt="logo" /></a></li>
+                    <li><a href="#!"><img src="/img/as.png" alt="logo" /></a></li>
                 </ul>
                 </div>
             </div>

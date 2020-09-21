@@ -7,7 +7,7 @@ const PopularVideos = ({ title, carouselId }) => {
               <div className="owl-carousel" id={carouselId}>
                 <div>
                   <a href="#!">
-                    <img src="img/pvideo1.jpg" alt="popular videos" />
+                    <img src="/img/pvideo1.jpg" alt="popular videos" />
                     <div className="carousel-desc">
                       <h4>Music video name</h4>
                       <p>Artist name goes here</p>
@@ -21,7 +21,7 @@ const PopularVideos = ({ title, carouselId }) => {
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/pvideo2.jpg" alt="popular videos" />
+                    <img src="/img/pvideo2.jpg" alt="popular videos" />
                     <div className="carousel-desc">
                       <h4>Music video name</h4>
                       <p>Artist name goes here</p>
@@ -30,7 +30,7 @@ const PopularVideos = ({ title, carouselId }) => {
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/pvideo3.jpg" alt="popular videos" />
+                    <img src="/img/pvideo3.jpg" alt="popular videos" />
                     <div className="carousel-desc">
                       <h4>Music video name</h4>
                       <p>Artist name goes here</p>
@@ -39,7 +39,7 @@ const PopularVideos = ({ title, carouselId }) => {
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/pvideo4.jpg" alt="popular videos" />
+                    <img src="/img/pvideo4.jpg" alt="popular videos" />
                     <div className="carousel-desc">
                       <h4>Music video name</h4>
                       <p>Artist name goes here</p>
@@ -48,7 +48,7 @@ const PopularVideos = ({ title, carouselId }) => {
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/pvideo2.jpg" alt="popular videos" />
+                    <img src="/img/pvideo2.jpg" alt="popular videos" />
                     <div className="carousel-desc">
                       <h4>Music video name</h4>
                       <p>Artist name goes here</p>

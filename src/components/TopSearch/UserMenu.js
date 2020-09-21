@@ -13,10 +13,10 @@ class UserMenu extends Component {
             <div className="user-menu" id="usertab1show">
                 <ul>
                     <li className="waves-effect">
-                        <a href="my-profile.html">
+                        <a href="#">
                             <div className="d-flex">
                             <ul className="d-flex user-desc">
-                                <li><img src="img/user.jpg" className="dropdown-user" alt="user" /></li>
+                                <li><img src="/img/user.jpg" className="dropdown-user" alt="user" /></li>
                                 <li><h4 className="user-name">Johnathon Joe</h4><p className="phone">+8801710 000 000</p></li>
                             </ul>
                             <i className="fa fa-chevron-right"></i>

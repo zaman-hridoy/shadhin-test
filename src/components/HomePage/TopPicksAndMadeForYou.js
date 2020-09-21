@@ -7,27 +7,27 @@ const TopPicksAndMadeForYou = ({ title, carouselId }) => {
               <div className="owl-carousel" id={carouselId}>
                 <div>
                   <a href="#!">
-                    <img src="img/TopPick1.jpg" alt="Top Pick" />
+                    <img src="/img/TopPick1.jpg" alt="Top Pick" />
                   </a>
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/TopPick2.jpg" alt="Top Pick" />
+                    <img src="/img/TopPick2.jpg" alt="Top Pick" />
                   </a>
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/TopPick3.jpg" alt="Top Pick" />
+                    <img src="/img/TopPick3.jpg" alt="Top Pick" />
                   </a>
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/TopPick1.jpg" alt="Top Pick" />
+                    <img src="/img/TopPick1.jpg" alt="Top Pick" />
                   </a>
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/TopPick2.jpg" alt="Top Pick" />
+                    <img src="/img/TopPick2.jpg" alt="Top Pick" />
                   </a>
                 </div>
               </div>

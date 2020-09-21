@@ -1,13 +1,20 @@
 import React, { Component, Fragment } from 'react';
-
+import { appendScript, removeScript } from '../../utils/appendScripts.js';
 // components
 import TopPicksAndMadeForYou from './TopPicksAndMadeForYou.js';
 import PopularArtistAndRadioRow from './PopularArtistAndRadioRow.js';
 import CommonRow from './CommonRow.js';
 import PopularVideos from './PopularVideos.js';
 import TrendingVideos from './TrendingVideos.js';
+import Footer from '../Footer/Footer.js';
 
 class Homepage extends Component {
+    componentDidMount() {
+        appendScript('/js/main.js');
+    }
+    componentWillUnmount() {
+        removeScript('/js/main.js');
+    }
     render() {
         return (
             <Fragment>
@@ -60,6 +67,7 @@ class Homepage extends Component {
                         carouselId="carousel10"
                     />
                 </div>
+                <Footer />
             </Fragment>
         )
     }

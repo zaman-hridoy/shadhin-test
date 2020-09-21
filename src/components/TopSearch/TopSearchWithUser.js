@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { getSearchResults } from '../../store/actions/searchAction.js';
+
+import { appendScript, removeScript } from '../../utils/appendScripts.js';
+import { getSearchResults, clearSearchResult } from '../../store/actions/searchAction.js';
 
 // components
 import UserMenu from './UserMenu.js';
@@ -12,8 +14,18 @@ class TopSearchWithUser extends Component {
     state = {
         keyword: ''
     }
+    componentDidMount() {
+        appendScript('/js/popupOnRender.js');
+        console.log('back')
+    }
+
+    componentWillUnmount() {
+        removeScript('/js/popupOnRender.js');
+    }
+
     clearKeyword = () => {
-        this.setState({ keyword: '' })
+        this.setState({ keyword: '' });
+        this.props.clearSearchResult();
     }
     changeHandler = e => {
         this.setState({ keyword: e.target.value });
@@ -23,6 +35,12 @@ class TopSearchWithUser extends Component {
         e.preventDefault();
         this.props.getSearchResults(this.state.keyword);
     }
+    // focusHandler = () => {
+    //     this.setState({ showSearchBox: true });
+    // }
+    // blurHandler = () => {
+    //     this.setState({ showSearchBox: false });
+    // }
     render() {
         const { keyword } = this.state;
         const { loading, results } = this.props;
@@ -37,9 +55,11 @@ class TopSearchWithUser extends Component {
                             value={keyword}
                             placeholder="Search artist, songs, videos..."
                             onChange={this.changeHandler}
+                            onFocus={this.focusHandler}
+                            onBlur={this.blurHandler}
                         />
                         <button type="submit" className="btn-submit"><i className="fa fa-search"></i></button>
-                        {keyword.length > 0 && <button onClick={this.clearKeyword} className="search-cancil"><img src="img/icon-cross.png" alt="icon cross" /></button>}
+                        {keyword.length > 0 && <button onClick={this.clearKeyword} className="search-cancil"><img src="/img/icon-cross.png" alt="icon cross" /></button>}
                     </form>
                     </div>
                     {/* search result */}
@@ -47,18 +67,19 @@ class TopSearchWithUser extends Component {
                         <SearchResult 
                             loading={loading}
                             results={results}
+                            clearKeyword={this.clearKeyword}
                         />
                     )}
 
                     <div className="mobile-logo d-block d-md-none">
-                        <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
+                        <a href="#"><img src="/img/logo.png" alt="logo" /></a>
                     </div>
 
                     {/* user info */}
                     <div className="user-info">
                         <ul>
                             <li><a href="#!" className="open-drop" id="usertab2"><i className="fa fa-bell"></i></a></li>
-                            <li><a href="#!" className="open-drop" id="usertab1"><img src="img/user.jpg" alt="user" /></a></li>
+                            <li><a href="#!" className="open-drop" id="usertab1"><img src="/img/user.jpg" alt="user" /></a></li>
                         </ul>
                     </div>
 
@@ -91,7 +112,8 @@ class TopSearchWithUser extends Component {
 }
 
 const actions = {
-    getSearchResults
+    getSearchResults,
+    clearSearchResult
 }
 
 const mapStateToProps = state => ({

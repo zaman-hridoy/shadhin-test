@@ -13,7 +13,7 @@ const MobileSearchView = ({ keyword, changeHandler, submitHandler, clearKeyword 
                     onChange={changeHandler}
                 />
                 <button type="submit" className="btn-submit"><i className="fa fa-search"></i></button>
-                {keyword.length > 0 && <button onClick={clearKeyword} className="search-cancil"><img src="img/icon-cross.png" alt="icon cross" /></button>}
+                {keyword.length > 0 && <button onClick={clearKeyword} className="search-cancil"><img src="/img/icon-cross.png" alt="icon cross" /></button>}
             </form>
         </div>
     );

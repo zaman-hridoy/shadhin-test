@@ -7,7 +7,7 @@ const CommonRow = ({ title, carouselId }) => {
               <div className="owl-carousel" id={carouselId}>
                 <div>
                   <a href="#!">
-                    <img src="img/recentlyplayed1.jpg" alt="recently played" />
+                    <img src="/img/recentlyplayed1.jpg" alt="recently played" />
                     <div className="carousel-desc">
                       <h4>Cats and music</h4>
                       <p>Artist name goes here</p>
@@ -16,7 +16,7 @@ const CommonRow = ({ title, carouselId }) => {
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/recentlyplayed2.jpg" alt="recently played" />
+                    <img src="/img/recentlyplayed2.jpg" alt="recently played" />
                     <div className="carousel-desc">
                       <h4>Music name</h4>
                       <p>Artist name goes here</p>
@@ -25,7 +25,7 @@ const CommonRow = ({ title, carouselId }) => {
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/recentlyplayed3.jpg" alt="recently played" />
+                    <img src="/img/recentlyplayed3.jpg" alt="recently played" />
                     <div className="carousel-desc">
                       <h4>Music name</h4>
                       <p>Artist name goes here</p>
@@ -34,7 +34,7 @@ const CommonRow = ({ title, carouselId }) => {
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/recentlyplayed4.jpg" alt="recently played" />
+                    <img src="/img/recentlyplayed4.jpg" alt="recently played" />
                     <div className="carousel-desc">
                       <h4>Music name</h4>
                       <p>Artist name goes here</p>
@@ -43,7 +43,7 @@ const CommonRow = ({ title, carouselId }) => {
                 </div>
                 <div>
                   <a href="#!">
-                    <img src="img/recentlyplayed2.jpg" alt="recently played" />
+                    <img src="/img/recentlyplayed2.jpg" alt="recently played" />
                     <div className="carousel-desc">
                       <h4>Music name</h4>
                       <p>Artist name goes here</p>
